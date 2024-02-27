@@ -1,4 +1,4 @@
-#include "binary_tree.h"
+#include "binary_trees.h"
 
 /**
   * binary_tree_insert_right - Inserts node as the right-child odf another
@@ -12,7 +12,7 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 	binary_tree_t *current;
 
 	if (parent == NULL)
-		rethurn (NULL);
+		return (NULL);
 
 	current = binary_tree_node(parent, value);
 	if (current == NULL)
