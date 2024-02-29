@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 bst_t *inorder_successor(bst_t *root);
-bst_t *bst_delete(bst_t *root, bst_t node);
+bst_t *bst_delete(bst_t *root, bst_t *node);
 bst_t *bst_remove_recursive(bst_t *root, bst_t *node, int value);
 bst_t *bst_remove(bst_t *root, int value);
 /**
@@ -37,7 +37,7 @@ bst_t *bst_delete(bst_t *root, bst_t *node)
 		if (node->right != NULL)
 			node->right->parent = parent;
 		free(node);
-		return (parent == NULL ? node->right : root)
+		return (parent == NULL ? node->right : root);
 	}
 
 	if (node->right == NULL)
@@ -72,7 +72,7 @@ bst_t *bst_remove_recursive(bst_t *root, bst_t *node, int value)
 	{
 		if (node->n == value)
 			return (bst_delete(root, node));
-		if (node->n value)
+		if (node->n > value)
 			return(bst_remove_recursive(root, node->left, value));
 		return (bst_remove_recursive(root, node->right, value));
 	}

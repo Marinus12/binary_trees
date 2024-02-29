@@ -19,7 +19,7 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 	tree->right = tmp;
 	if (tmp != NULL)
 		tmp->parent = tree;
-	tmp = tmp->parent;
+	tmp = tree->parent;
 	tree->parent = hinge;
 	hinge->parent = tmp;
 	if (tmp != NULL)
@@ -27,7 +27,7 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 		if (tmp->left == tree)
 			tmp->left = hinge;
 		else
-			tmp->rigjht = hinge;
+			tmp->right = hinge;
 	}
 	return (hinge);
 }
