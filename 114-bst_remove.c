@@ -59,7 +59,7 @@ bst_t *bst_delete(bst_t *root, bst_t *node)
 }
 
 /**
-  * bst_remove_recursive - Removes a node from the binary search tree 
+  * bst_remove_recursive - Removes a node from the binary search tree
   * @root: A pointer to the root node of the BST to remove a node from
   * @node: The value to remove from the BST
   * @value: The value to remove from BST
@@ -73,7 +73,7 @@ bst_t *bst_remove_recursive(bst_t *root, bst_t *node, int value)
 		if (node->n == value)
 			return (bst_delete(root, node));
 		if (node->n > value)
-			return(bst_remove_recursive(root, node->left, value));
+			return (bst_remove_recursive(root, node->left, value));
 		return (bst_remove_recursive(root, node->right, value));
 	}
 	return (NULL);
