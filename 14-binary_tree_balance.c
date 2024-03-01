@@ -3,7 +3,7 @@
 /**
  * height - height of a binary tree.
  * @tree: pointer to root.
- * Return: If tree is NULL, 0.  
+ * Return: If tree is NULL, 0.
  */
 size_t height(const binary_tree_t *tree)
 {
